@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оставить отзыв и отменить заказ</title>
+</head>
+<body>
+
+<h2>Оставьте отзыв о товаре</h2>
+<form method="POST" action="save_review.php">
+    Имя: <input type="text" name="name" required><br><br>
+    Отзыв: <textarea name="review" required></textarea><br><br>
+    Рейтинг: 
+    <select name="rating" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br><br>
+    <input type="submit" value="Отправить отзыв">
+</form>
+
+<h2>Отменить заказ</h2>
+<form method="POST" action="cancel_order.php">
+    Номер заказа: <input type="text" name="order_id" required><br><br>
+    Причина отмены: <textarea name="reason" required></textarea><br><br>
+    <input type="submit" value="Отменить заказ">
+</form>
+
+</body>
+</html>
